@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="CV - Fernandez Castillo" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://github.com/Nico4400/CV---Fern-ndez-Castillo-Nicol-s.git" />
+    <meta property="og:image" content="./imagenes/IMG_0608 (2).jpg" />
+    <meta property="og:description" content="Descripcion" />
+    
     <title>CV - Fernández Castillo Nicolás</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
 </head>
 
 <body class="cuerpo">
@@ -51,12 +61,12 @@
                         <box-icon type='solid' name='graduation'></box-icon> Formacion</a>                        
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Idiomas">
-                        <box-icon name='world'></box-icon> Idiomas</a>
+                    <a class="nav-link" href="#Formacion">
+                        <box-icon name='briefcase'></box-icon> Experiencias</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Experiencias">
-                        <box-icon name='briefcase'></box-icon> Experiencias</a>
+                    <a class="nav-link" href="#Idiomas">
+                        <box-icon name='world'></box-icon> Idiomas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#Conocimientos">
@@ -72,25 +82,416 @@
         </nav>
         
     <main>   
-        <div id="Perfil">            
+        <div id="Perfil">
             <h2>Perfil</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div class="container">            
+                    <div class="fotoperfil">
+                        <img src="./imagenes/ingeniero-de-software.png" alt="Foto de Peril">
+                    </div>
+                    <div class="textoperfil">
+                        <p>Ingeniero Industrial, con espíritu creador, emprendedor, sentido social y capacidad de autogestión, con conocimientos y herramientas para cualquier área de trabajo. <br>
+                        Amplia disposición para el trabajo en equipo, así como para aprender de forma autodidacta, respetuoso y paciente, con disponibilidad al diálogo y capacidad para solucionar problemas, teniendo en cuenta las normativas correspondientes.</p>
+                    </div>
+                </div>
         </div>     
         <div id="Formacion">
-            <h2>Formacion</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <div id="Idiomas">
-            <h2>Idiomas</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h2>Formación y Experiencias</h2>
+            <div id="myBtnContainer">
+                <button class="btn activo" id="btn" onclick="filterSelection('all')"> Mostrar todo</button>
+                <button class="btn" id="btn" onclick="filterSelection('formacion')"> Formación</button>
+                <button class="btn" id="btn" onclick="filterSelection('experiencias')"> Experiencias</button>
+            </div>
+            <!-- <div class="parafiltro">     -->
+                <div class="lineatiempo">
+                    <div class="timeline">
+                        <div class="filterDiv experiencias">
+                            <div class="contenedor left">
+                            <div class="contiene">
+                                <h5>2021 - Actualidad</h5>
+                                <h4>Instituto de la Vivienda PBA - Control Interno</h4>
+                                <p>Control de planillas automatizadas para detectar errores en el manejo de los usuarios. Optimizar la comunicación dentro de la dirección y con el resto de las mismas.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="filterDiv experiencias">
+                            <div class="contenedor right">
+                            <div class="contiene">
+                                <h5>2020 - 2021</h5>
+                                <h4>Ministerio de Infraestructura PBA - Certificaiones</h4>
+                                <p>Control de planillas automatizadas para detectar errores en el manejo de los usuarios. Optimizar la comunicación dentro de la dirección y con el resto de las mismas.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="filterDiv experiencias">
+                            <div class="contenedor left">
+                            <div class="contiene">
+                                <h5>2018 - 2020</h5>
+                                <h4>Ministerio de Infraestructura PBA - Consultor soporte Sistemas de Información</h4>
+                                <p>• Seguimiento y control de las obras de la Secretaría de Obra Pública. <br>
+                                    • Relevamiento y análisis de los Pliegos de especificaciones técnicas y contratos con presupuesto provincial y en convenio con organismos multilaterales e internacionales, de la Secretaría de Obra Pública. <br>
+                                    • Carga en las distintas transacciones del sistema SAP ERP, la información necesaria para la certificación de obra pública. <br>
+                                    • Asistencia a las áreas técnicas en carga de actas de medición, redeterminaciones de precios y ampliaciones de obras, entre otras. <br>
+                                    • Capacitación a las áreas técnicas la aplicación del sistema ERP SAP <br>
+                                    • Producción de manuales de gestión y de certificación para las capacitaciones. <br>
+                                    • Análisis y gestión para la implementación del Módulo Financiero del software SAP ERP. <br>
+                                    • Asistencias personal y on-line a través del sistema SGI de atención como Mesa de Ayuda. <br>
+                                    • Incorporación al cuerpo de brigadistas y realización de las capacitaciones afines.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="filterDiv experiencias">
+                            <div class="contenedor right">
+                            <div class="contiene">
+                                <h5>2016 - 2018</h5>
+                                <h4>Microemprendimiento “CANEVIANDAS”</h4>
+                                <p>• Análisis de las recetas nutricionales acorde a la alimentación del can(BARF) <br>
+                                    • Análisis para realizar la evaluación del proyecto, de los siguientes cinco mercados: consumidor, proveedor, competidor, bienes sustitutos y distribuidor. <br>
+                                     • Estrategia Comercial, atraer y fidelizar a los clientes para mayores ventas. <br>
+                                     • Estudio Técnico, para definir, según su proceso productivo, el tamaño del lote y  así los tiempos de producción del flujo productivo, de acuerdo a las herramientas a utilizar. <br>
+                                     • Estudio Económico Financiero, se realizó un flujo de fondos del proyecto, calculando el capital de trabajo, los costos fijos y variables, entre otras, para así calcular los indicadores de interés. <br>
+                                     • Estudio ambiental, legal y organizacional.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="filterDiv experiencias">
+                            <div class="contenedor left">
+                            <div class="contiene">
+                                <h5>2011 - 2012</h5>
+                                <h4>Big Sky Resort, Montana (MT) - Lift Operator (ascensorista de telesquíes)</h4>
+                                <p>Control de planillas automatizadas para detectar errores en el manejo de los usuarios. Optimizar la comunicación dentro de la dirección y con el resto de las mismas.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="filterDiv formacion">
+                            <div class="contenedor right">
+                            <div class="contiene">
+                                <h5>2009 - 2019</h5>
+                                <h4>Carrera de Grado: Ingeniería Industrial.</h4>
+                                <p>Universidad Nacional de la Plata Facultad de ingeniería.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="filterDiv formacion">
+                            <div class="contenedor left">
+                            <div class="contiene">
+                                <h5>1996 - 2009</h5>
+                                <h4>Estudios Internacionales: Licenza Media /Esame di Stato, Maturitá.</h4>
+                                <p>Instituto Cultural Itálico Leonardo Da Vinci, La Plata.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- <div class="contenedor left">
+                        <div class="contiene">
+                            <h2>2015</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                        </div>
+                        </div>
+                        <div class="contenedor right">
+                        <div class="contiene">
+                            <h2>2012</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                        </div>
+                        </div>
+                        <div class="contenedor left">
+                        <div class="contiene">
+                            <h2>2011</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                        </div>
+                        </div>
+                        <div class="contenedor right">
+                        <div class="contiene">
+                            <h2>2007</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                        </div>
+                        </div> -->
+                    </div>
+                </div>
+            <!-- </div> -->
         </div>
         <div id="Experiencias">
             <h2>Experiencias</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
+        <div id="Idiomas">
+            <h2>Idiomas</h2>
+                <div class="fondoidioma">
+                    <div class="banderas">
+                        <div class="ban_nom">
+                            <div class="ingles" id="ingles">
+                                <div>
+                                    <img src="imagenes/reino-unido.png",alt="Ingles" class = "img-fluid" width="60px">
+                                </div>
+                                <div>
+                                    <img src="imagenes/united-states.png" alt="Ingles" class = "img-fluid" width="60px">
+                                </div>
+                            </div>
+                            <div class="nom">
+                                <p>Ingles</p>
+                            </div>
+                        </div>
+                        <div class="ban_nom">
+                            <div class="italiano" id="italiano">
+                                <div>
+                                    <img src="imagenes/italy.png" alt="Italiano" class = "img-fluid" width="60px">
+                                </div>
+                            </div>
+                            <div class="nom">
+                                <p>Italiano</p>
+                            </div>
+                        </div>
+                        <div class="ban_nom">
+                            <div class="español" id="español">
+                                <div>
+                                    <img src="imagenes/spain.png" alt="Español" class = "img-fluid" width="60px">
+                                </div>
+                                <div>
+                                    <img src="imagenes/argentina.png" alt="Español" class = "img-fluid" width="60px">
+                                </div>
+                            </div>
+                            <div class="nom">
+                                <p>Español</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detallenivel">
+                        <p class="nivel" id="nivel">Nivel:</p>
+                        <p class="experiencia" id="experiencia">Experiencia:</p>
+                        <p class="detalle" id="detalle">Detalle:</p>
+                    </div>
+                </div>
+        </div>
         <div id="Conocimientos">
             <h2>Conocimientos</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="herramientas">
+                <div class="gestion">
+                    <button type="button" class="collapsible">Herrmaientas de Gestion</button>
+                    <div class="content">
+                        <div class="office">
+                            <div class="tarjeta" style="--i:url(imagenes/office.png)">
+                            <div class="text-block">
+                                <h4>Microsoft Office</h4>
+                                <div class="bar-1">
+                                    <div class="bar" data-width="85%">
+                                      <div class="bar-inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/word.png)">
+                                <div class="text-block">
+                                    <h4>Word</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="75%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/excel.png)">
+                                <div class="text-block">
+                                    <h4>Excel</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="90%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/powerpoint.png)">
+                                <div class="text-block">
+                                    <h4>Power Point</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="75%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/project.png)">
+                                <div class="text-block">
+                                    <h4>Project</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="65%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="drive">
+                            <div class="tarjeta" style="--i:url(imagenes/google-drive.png)">
+                                <div class="text-block">
+                                    <h4>Google Drive</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="80%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/docs.png)">
+                                <div class="text-block">
+                                    <h4>.Doc</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="75%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/sheets.png)">
+                                <div class="text-block">
+                                    <h4>.Sheets</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="95%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/google.png)">
+                                <div class="text-block">
+                                    <h4>.Slides</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="75%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/google-forms.png)">
+                                <div class="text-block">
+                                    <h4>.Forms</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="85%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/Google_Colaboratory_SVG_Logo.svg.png)">
+                                <div class="text-block">
+                                    <h4>.Colaboratory</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="70%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/google-apps-script.png)">
+                                <div class="text-block">
+                                    <h4>.Apps Script</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="65%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/lucidchart_logo_icon_170973.png)">
+                                <div class="text-block">
+                                    <h4>.Lucidchart</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="60%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Lenguaje">
+                    <button type="button" class="collapsible">Desarrollo Web</button>
+                    <div class="content">
+                        <div class="web">
+                            <div class="tarjeta" style="--i:url(imagenes/html-5.png)">
+                                <div class="text-block">
+                                    <h4>HTML</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="65%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/css-3.png)">
+                                <div class="text-block">
+                                    <h4>CSS</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="65%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/java-script.png)">
+                                <div class="text-block">
+                                    <h4>Java Script</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="65%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/python.png)">
+                                <div class="text-block">
+                                    <h4>Python</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="65%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/sql-server.png)">
+                                <div class="text-block">
+                                    <h4>SQL</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="65%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/ruby.png)">
+                                <div class="text-block">
+                                    <h4>Ruby</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="65%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjeta" style="--i:url(imagenes/c-.png)">
+                                <div class="text-block">
+                                    <h4>C++</h4>
+                                    <div class="bar-1">
+                                        <div class="bar" data-width="65%">
+                                          <div class="bar-inner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="diseño">    
+                    <button type="button" class="collapsible">Diseño Grafico</button>
+                    <div class="content">
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+                <div class="sap">
+                    <button type="button" class="collapsible">SAP ERP</button>
+                    <div class="content">
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </main>
@@ -115,7 +516,7 @@
                         <box-icon type='logo' name='discord-alt'></box-icon></a>
                 </div>
                 <div class="descarga">
-                    <a href="/imagenes/CV Nicolas Fernadez Castillo-2022.pdf" download class="cv"><span>Descargar CV</span></a>
+                    <a href="/imagenes//CV Nicolas Fernadez Castillo-2022_page-0001.jpg" download class="cv"><span>Descargar CV</span></a>
                 </div>
             </div>
             <div class="contacto-derecha">
@@ -135,7 +536,9 @@
         </div>
 
         <script src="contactos.js"></script>
+        
     </footer>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- <a href="https://www.flaticon.com/free-icons/microsoft-office" title="microsoft office icons">Microsoft office icons created by Pixel perfect - Flaticon</a> -->
 </body>
 </html>
