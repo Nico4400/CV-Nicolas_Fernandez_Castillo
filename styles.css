@@ -571,6 +571,7 @@ main div{
     display:flex;
     min-width:fit-content;
     align-items: center;
+    flex-direction: row;
     }
 .contacto-izquierda{
     flex-basis: 40%;
@@ -659,4 +660,23 @@ form input, form textarea{
     border-radius: 6px;    
     }
 
-    
+@media screen and (max-width: 1000px) {
+    .contacto-izquierda {
+        padding: 0 ;
+    }
+    .contacto-derecha {
+        margin: 5% 5% 0% 5%;
+    }
+    .descarga{
+        text-align: center;
+    }
+    .container {
+        width:  100%;        
+        flex-direction: column;
+    }
+    .textoperfil, .fotoperfil{
+        padding-top: 10%;
+        text-align: center;
+        
+    }
+}
